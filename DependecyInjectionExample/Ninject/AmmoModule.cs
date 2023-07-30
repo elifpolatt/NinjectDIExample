@@ -11,12 +11,13 @@ namespace DependecyInjectionExample.Ninject
 {
     public class AmmoModule : NinjectModule
     {
+        //AmmoModule sınıfı Ninject ile 
         public override void Load()
         {
-           
+            //IAmmo isminde bir interface gördüğünde YAmmo sınıfından bir nesne baglayacak.
             Bind<IAmmo>().To<YAmmo>();
-
-         
+            //veya 
+            Bind<IAmmo>().To<XAmmo>();
         }
     }
 }

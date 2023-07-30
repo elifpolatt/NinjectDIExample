@@ -19,11 +19,12 @@ namespace DependecyInjectionExample
             //weaponX.Fire();
             //weaponY.Fire();
 
-            //çekirdek olusturduk.
+            //ninject çekirdeği olusturduk. Çekirdek AmmoModule sınıfına bagladık.
             IKernel kernel = new StandardKernel(new AmmoModule());
 
+            //Ninject çekirdeğinden bir Weapon nesnesi talep ediyoruz.
             Weapon weapon = kernel.Get<Weapon>();
-            weapon.Fire();
+            weapon.Fire(); //Fire() metodunu cagırdık
 
         }
     }
