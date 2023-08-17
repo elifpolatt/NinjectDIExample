@@ -17,7 +17,7 @@ namespace DependecyInjectionExample.Ninject
             //IAmmo isminde bir interface gördüğünde YAmmo sınıfından bir nesne baglayacak.
             Bind<IAmmo>().To<YAmmo>();
             //veya 
-            Bind<IAmmo>().To<XAmmo>();
+         //Bind<IAmmo>().To<XAmmo>();
         }
     }
 }
